@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+  <!-- BEGIN: Head-->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui"
+    />
+
+    <title>Dashboard</title>
+    <link
+      rel="apple-touch-icon"
+      href="app-assets/images/icons/apple-safari.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="app-assets/images/ico/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+      rel="stylesheet"
+    />
+
+    <!-- BEGIN: Vendor CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/vendors/css/vendors.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/vendors/css/charts/apexcharts.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/vendors/css/extensions/toastr.min.css"
+    />
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/bootstrap-extended.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/colors.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/components.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/themes/dark-layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/themes/bordered-layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/themes/semi-dark-layout.css"
+    />
+
+    <!-- BEGIN: Page CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/core/menu/menu-types/vertical-menu.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/pages/dashboard-ecommerce.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/plugins/charts/chart-apex.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="app-assets/css/plugins/extensions/ext-component-toastr.css"
+    />
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/style.css"
+    />
+
+    <style>
+      .curspoint ul {
+        cursor: pointer !important;
+      }
+      .btn {
+        color: #4b78bb !important;
+        border-color: #4b78bb !important;
+        line-height: 0.7 !important;
+        padding: 0.786rem 2rem !important;
+      }
+
+      .btn-primary:hover:not(.disabled):not(:disabled) {
+        box-shadow: 0 8px 25px -8px #4b78bb !important;
+      }
+      .btn-primary {
+        background: #4b78bb !important;
+        color: white !important;
+      }
+
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary.active {
+        color: #fff;
+        background-color: #4b78bb !important;
+      }
+      input {
+        outline: none !important;
+      }
+    </style>
+    <!-- END: Custom CSS-->
+  </head>
+  <!-- END: Head-->
+
+  <!-- BEGIN: Body-->
+
+  <body
+    class="vertical-layout vertical-menu-modern navbar-floating footer-static"
+    data-open="click"
+    data-menu="vertical-menu-modern"
+    data-col=""
+  >
+    <!-- BEGIN: Header-->
+    <nav
+      class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow m-0"
+      style="left: 0 !important; width: 100%"
+    >
+      <div class="navbar-container d-flex content">
+        <div class="bookmark-wrapper d-flex align-items-center">
+          <ul class="nav navbar-nav">
+            <li class="nav-item d-xl-none">
+              <a class="nav-link menu-toggle" href="#"
+                ><i class="ficon" data-feather="menu"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <h4
+                style="cursor: pointer"
+                onclick="location.href='./Student.html'"
+              >
+                <img
+                  src="app-assets/images/svg/via-logo.jpeg"
+                  width="80%"
+                  height="80%"
+                  alt="logo"
+                />
+              </h4>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav navbar-nav align-items-center ms-auto">
+          <li class="nav-item align-items-center">
+            <span
+              ><i class="ficon font-medium-5 text-dark" data-feather="bell"></i
+            ></span>
+          </li>
+          <li class="nav-item dropdown dropdown-user">
+            <a
+              class="nav-link dropdown-toggle dropdown-user-link"
+              id="dropdown-user"
+              href="#"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <div class="user-nav d-sm-flex d-none">
+                <span class="user-name fw-bolder">Mohd Hassan</span
+                ><span class="user-status">Admin</span>
+              </div>
+              <span class="avatar"
+                ><img
+                  class="round"
+                  src="app-assets/images/portrait/small/avatar-s-11.jpg"
+                  alt="avatar"
+                  height="40"
+                  width="40" /><span class=""></span
+              ></span>
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="dropdown-user"
+            >
+              <a class="dropdown-item" href="StudentProfile.html"
+                ><i class="me-50" data-feather="user"></i> Profile</a
+              ><a class="dropdown-item" href="#"
+                ><i class="me-50" data-feather="power"></i> Logout</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- END: Header-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content" style="margin-left: 0">
+      <div class="content-overlay"></div>
+      <div class="header-navbar-shadow"></div>
+      <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row"></div>
+        <div class="content-body">
+          <!-- BODY CONTENT -->
+          <div class="container">
+            <div class="row shadow p-3">
+              <div class="col d-flex flex-column" style="gap: 1rem">
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="name">Name</label>
+                  <input
+                    style="padding: 0.5rem"
+                    type="text"
+                    placeholder="Enter Name"
+                    id="name"
+                  />
+                </div>
+
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="state">State</label>
+                  <input
+                    style="padding: 0.5rem"
+                    type="text"
+                    placeholder="Enter State"
+                    id="state"
+                  />
+                </div>
+
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="mob"
+                    >Mobile Number<span style="color: red">*</span>
+                  </label>
+                  <input
+                    style="padding: 0.5rem"
+                    type="number"
+                    placeholder="Enter Mobile Number"
+                    id="mob"
+                  />
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="gap: 1rem">
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="empId">Employee ID</label>
+                  <input
+                    style="padding: 0.5rem"
+                    type="text"
+                    placeholder="Enter Employee ID"
+                    id="empId"
+                  />
+                </div>
+
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="cont">Country</label>
+                  <select style="padding: 0.5rem">
+                    <option value="Country">India</option>
+                    <option value="Country">Australia</option>
+                    <option value="Country">UAE</option>
+                    <option value="Country">USA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="gap: 1rem">
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="doj">Date Of Joining</label>
+                  <input
+                    style="padding: 0.5rem"
+                    type="date"
+                    placeholder="Select Date"
+                    id="doj"
+                  />
+                </div>
+                <div class="d-flex flex-column" style="gap: 0.5rem">
+                  <label for="email"
+                    >Email ID<span style="color: red">*</span></label
+                  >
+                  <input
+                    style="padding: 0.5rem"
+                    type="email"
+                    placeholder="Enter Email ID"
+                    id="email"
+                  />
+                </div>
+              </div>
+              <div class="col d-flex flex-column" style="gap: 1rem">
+                <div class="card p-3 justify-content-center align-items-center">
+                  <img
+                    style="width: 7rem; height: 7rem"
+                    src="app-assets/images/svg/camera-svgrepo-com.svg"
+                    alt=""
+                  />
+                  Add Image
+                </div>
+              </div>
+
+              <div>
+                <button class="btn-primary btn mt-2">Change password</button>
+              </div>
+            </div>
+          </div>
+          <!-- BODY CONTENT -->
+        </div>
+      </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer
+      class="footer footer-static footer-light shadow"
+      style="min-height: 5.35rem !important"
+    >
+      <div class="float-end mt-1">
+        <button class="btn btn-outline-secondary">Cancel</button>
+        <button class="btn btn-primary">Save</button>
+      </div>
+    </footer>
+
+    <!-- END: Footer-->
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <!-- <script src="app-assets/vendors/js/extensions/toastr.min.js"></script> -->
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="js/new.js"></script>
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+    <!-- END: Page JS-->
+
+    <script>
+      $(window).on("load", function () {
+        if (feather) {
+          feather.replace({
+            width: 14,
+            height: 14,
+          });
+        }
+      });
+    </script>
+  </body>
+  <!-- END: Body-->
+</html>
